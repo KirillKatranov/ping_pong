@@ -37,7 +37,8 @@ back = (200, 255, 255) #цвет фона (background)
 win_width = 600
 win_height = 500
 window = display.set_mode((win_width, win_height))
-window.fill(back)
+#window.fill(back)
+background = transform.scale(image.load("fon.jpg"), (win_width, win_height))
 
 
 #флаги, отвечающие за состояние игры
@@ -72,7 +73,7 @@ while game:
             game = False
   
     if finish != True:
-        window.fill(back)
+        window.blit(background, (0, 0))
         racket1.update_l()
         racket2.update_r()
         draw.rect(window, (0,0,0), barier)
