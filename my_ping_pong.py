@@ -34,10 +34,10 @@ class Player(GameSprite):
 
 #игровая сцена:
 back = (200, 255, 255) #цвет фона (background)
-win_width = 600
+win_width = 800
 win_height = 500
 window = display.set_mode((win_width, win_height))
-#window.fill(back)
+
 background = transform.scale(image.load("fon.jpg"), (win_width, win_height))
 
 
@@ -51,8 +51,8 @@ mixer.music.load("zvuk-skandirovaniya-bolelschikov-25037.ogg")
 #mixer.music.play(-1)
 
 #создания мяча и ракетки   
-racket1 = Player('racket.png', 30, 200, 4, 50, 150) 
-racket2 = Player('racket.png', 520, 200, 4, 50, 150)
+racket1 = Player('racket_without_backgriund.png', 30, 200, 4, 50, 150) 
+racket2 = Player('racket_without_backgriund.png', 520, 200, 4, 50, 150)
 ball = GameSprite('tenis_ball.png', 200, 200, 4, 50, 50)
 
 
